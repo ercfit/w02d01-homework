@@ -165,24 +165,46 @@ const bondFilms = [
 
 // * Create a new array `oddBonds`, of only the Bond films released on odd-numbered years.
 
-oddBonds = [];
-oddBonds.length = 16;
+// oddBonds = [];
+// oddBonds.length = 16;
 
-for (i = 0; i < bondFilms.length; i++){
-    if(bondFilms[i].year % 2 != 0){
-      bondFilms[i].title.slice;
-      oddBonds = bondFilms[i].title;
-    console.log(oddBonds);
-  } 
-}
-console.log(oddBonds[4]);
-//console.log(oddBonds);
-// "6th commit - made an array of odd bonds".
-// <hr>
+// for (i = 0; i < bondFilms.length; i++){
+//     if(bondFilms[i].year % 2 != 0){
+//       bondFilms[i].title.slice;
+//       oddBonds = bondFilms[i].title;
+//     console.log(oddBonds);
+//   } 
+// }
+
+// "6th commit
 
 // * Determine the total cumulative gross of the Bond franchise, and console.log the result. _hint_ To make the grosses into usable numbers, look into the `.replace` Javascript method (there are many ways to do this, however). Look into `parseInt` also.
 
-// <hr>
+let moneyList = ["$1,108,561,008", "$1,014,941,117", "$912,257,512", "$825,110,761", "$756,544,419", "$692,713,752", 
+                "$669,789,482", "$655,872,400", "$648,514,469", "$622,246,378", "$576,277,964","$543,639,638", "$529,548,711", "$505,899,782", "$491,617,153", "$486,468,881", "$478,946,402", "$448,249,281", "$440,759,072", "$426,244,352","$381,088,866", "$321,172,633", "$285,157,191"];
+
+function changeStringToNum(num){
+  let result = ''
+  for(let i = 0; i < num.length; i++){
+    if(!isNaN(num[i])){
+      result += num[i];
+    }
+  }
+  result = parseInt(result);
+  return result;
+}
+let goodMoneyList = [];
+for(let i = 0; i < moneyList.length; i++){
+  let goodMoney = changeStringToNum(moneyList[i]);
+  goodMoneyList.push(goodMoney);
+}
+let sum = 0;
+for(let i = 0; i < goodMoneyList.length; i++){
+  sum += goodMoneyList[i]
+}
+console.log("$" + sum);
+
+
 // &#x1F534; **Commit your work.** <br>
 // The commit message should read: <br>
 // "7th commit - determined the bond films gross".
