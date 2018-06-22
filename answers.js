@@ -152,22 +152,31 @@ const bondFilms = [
 
 // * Create a new array called `bondTitles` with only the titles of the Bond films, and console.log the new array.
 	
-bondTitles = [];
-bondTitles.length = 23;
-for (i = 0; i < bondFilms.length; i++){
-	(bondFilms[i].title.slice);
-	bondTitles = bondFilms[i].title;
-	console.log(bondTitles);
-  }
+// bondTitles = [];
+// bondTitles.length = 23;
+// for (i = 0; i < bondFilms.length; i++){
+// 	(bondFilms[i].title.slice);
+// 	bondTitles = bondFilms[i].title;
+// 	console.log(bondTitles);
+//   }
 
-// "5th commit - Made an array of bond titles".
+// "5th commit
 
 
 // * Create a new array `oddBonds`, of only the Bond films released on odd-numbered years.
 
-// <hr>
-// &#x1F534; **Commit your work.** <br>
-// The commit message should read: <br>
+oddBonds = [];
+oddBonds.length = 16;
+
+for (i = 0; i < bondFilms.length; i++){
+    if(bondFilms[i].year % 2 != 0){
+      bondFilms[i].title.slice;
+      oddBonds = bondFilms[i].title;
+    console.log(oddBonds);
+  } 
+}
+console.log(oddBonds[4]);
+//console.log(oddBonds);
 // "6th commit - made an array of odd bonds".
 // <hr>
 
